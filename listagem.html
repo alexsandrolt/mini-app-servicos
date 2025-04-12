@@ -1,63 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Listagem</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="listagem.css" />
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
   <script src="main.js" defer></script>
-  <link rel="stylesheet" href="listagem.css">
 </head>
-
 <body>
-  <h1>Listagem</h1>
-  <div id="prestadores" class="lista"></div>
+  <div class="app-container">
+    <h1>Listagem de Prestadores</h1>
 
+    <div id="prestadores" class="lista"></div>
 
-  <div class="avaliacoes">
-    <div class="perfil">
-      <img src="./img/Jacob Jones.webp" alt="Foto do prestador">
-      <div class="info">
-        <h3>João Silva</h3>
-        <p>Eletricista</p>
-        <div class="estrelas">⭐⭐⭐⭐☆</div>
-        <p class="comentario">Ótimo serviço, atencioso e rápido!</p>
+    <h2>Avaliações Recentes</h2>
+    <div class="avaliacoes">
+      <div class="perfil">
+        <img src="./img/Jacob Jones.webp" alt="Foto do prestador" />
+        <div class="info">
+          <h3>João Silva</h3>
+          <p>Eletricista</p>
+          <div class="estrelas">⭐⭐⭐⭐☆</div>
+          <p class="comentario">Ótimo serviço, atencioso e rápido!</p>
+        </div>
+      </div>
+
+      <div class="perfil">
+        <img src="./img/Darlene Robert....jpg" alt="Foto do prestador" />
+        <div class="info">
+          <h3>Maria Santos</h3>
+          <p>Diarista</p>
+          <div class="estrelas">⭐⭐⭐⭐⭐</div>
+          <p class="comentario">Caprichosa e muito simpática!</p>
+        </div>
+      </div>
+
+      <div class="perfil">
+        <img src="./img/Ramon Santos.avif" alt="Foto do prestador" />
+        <div class="info">
+          <h3>Carlos Mendes</h3>
+          <p>Encanador</p>
+          <div class="estrelas">⭐⭐⭐⭐☆</div>
+          <p class="comentario">Resolveu tudo no mesmo dia!</p>
+        </div>
       </div>
     </div>
 
-    <div class="perfil">
-      <img src="./img/Darlene Robert....jpg" alt="Foto do prestador">
-      <div class="info">
-        <h3>Maria Santos</h3>
-        <p>Diarista</p>
-        <div class="estrelas">⭐⭐⭐⭐⭐</div>
-        <p class="comentario">Caprichosa e muito simpática!</p>
-      </div>
-    </div>
-
-    <div class="perfil">
-      <img src="./img/Ramon Santos.avif" alt="Foto do prestador">
-      <div class="info">
-        <h3>Carlos Mendes</h3>
-        <p>Encanador</p>
-        <div class="estrelas">⭐⭐⭐⭐☆</div>
-        <p class="comentario">Resolveu tudo no mesmo dia!</p>
-      </div>
-
-    </div>
+    <button class="btn-proximo" onclick="window.location.href='avaliar.html'">Próximo →</button>
+    <button class="btn-voltar" onclick="window.location.href='index.html'">← Sair</button>
   </div>
-
-  <button class="btn-proximo" onclick="window.location.href='avaliar.html'">
-    Próximo →
-  </button>
-  <button class="btn-voltar" onclick="window.location.href='index.html'">← Sair</button>
-
-
-
-
-
-
 
   <script>
     document.addEventListener("DOMContentLoaded", async () => {
@@ -99,5 +91,4 @@
     }
   </script>
 </body>
-
 </html>

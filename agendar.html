@@ -4,29 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <title>Agendar Serviço</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="agendar.css">
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
   <script src="main.js" defer></script>
-  <link rel="stylesheet" href="./agendar.css">
 </head>
 
 <body>
-  <h1>Agendar Serviço</h1>
+  <div class="app-container">
+    <h1>Agendar Serviço</h1>
 
-  <form id="formAgendamento">
-    <label>Data:</label><br>
-    <input type="date" id="data" required><br><br>
+    <form id="formAgendamento">
+      <label>Data:</label><br>
+      <input type="date" id="data" required><br><br>
 
-    <label>Hora:</label><br>
-    <input type="time" id="hora" required><br><br>
+      <label>Hora:</label><br>
+      <input type="time" id="hora" required><br><br>
 
-    <label>Descrição:</label><br>
-    <textarea id="descricao" rows="4" required></textarea><br><br>
+      <label>Descrição:</label><br>
+      <textarea id="descricao" rows="4" required></textarea><br><br>
 
-    <button class="btn-confirmar" type="submit">Confirmar Agendamento</button>
-  </form>
+      <button class="btn-confirmar" type="submit">Confirmar Agendamento</button>
+    </form>
 
-  <a href="listagem.html"><button class="btn-voltar">Voltar</button></a>
+    <button class="btn-voltar" onclick="window.location.href='listagem.html'">Voltar</button>
+  </div>
 
   <script>
     document.getElementById("formAgendamento").addEventListener("submit", async (e) => {

@@ -5,109 +5,6 @@
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  background-color: #f4f4f4;
-}
-
-h1 {
-  color: #2c46b1;
-  margin-top: 100px;
-  margin-bottom: 20px;
-}
-
-#loginEmail {
-  width: 342px;
-  height: 48px;
-  border-radius: 8px;
-  border: none;
-  border: 2px solid #2d89ef;
-}
-
-#loginEmail:focus {
-  border-color: #2d89ef;
-  outline: none;
-}
-
-#loginSenha {
-  width: 342px;
-  height: 48px;
-  border-radius: 8px;
-  border: none;
-  border: 2px solid #2d89ef;
-}
-
-#loginSenha:focus {
-  border-color: #2d89ef;
-  outline: none;
-}
-
-button {
-  margin-bottom: 5px;
-}
-
-.lista {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-.card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 0 5px #ccc;
-  padding: 16px;
-  width: 250px;
-}
-
-.card h3 {
-  margin-top: 0;
-}
-
-.btn-entrar {
-  display: block;
-  width: 90%;
-  max-width: 250px;
-  margin: 20px auto;
-  background-color: #27ae60;
-  color: white;
-  padding: 14px 20px;
-  border: none;
-  border-radius: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
-}
-
-.btn-entrar:hover {
-  background-color: #219150;
-}
-
-.btn-criar {
-  background-color: #3498db;
-  color: white;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  margin: 16px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
-}
-
-.btn-criar:hover {
-  background-color: #2980b9;
-}
-
-body {
   min-height: 100vh;
   font-family: "Segoe UI", sans-serif;
   background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
@@ -121,15 +18,9 @@ body {
 }
 
 @keyframes darkGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .app-container {
@@ -137,30 +28,76 @@ body {
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
-  padding: 30px;
+  padding: 40px 30px;
   width: 100%;
-  max-width: 500px;
+  max-width: 400px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
 h1 {
-  text-align: center;
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  color: #ffffff;
 }
 
-p {
-  text-align: center;
+input {
+  width: 100%;
+  height: 56px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  border: 2px solid #2d89ef;
+  padding: 0 15px;
   font-size: 1rem;
-  opacity: 0.85;
+}
+
+input:focus {
+  border-color: #2d89ef;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  height: 52px;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.btn-entrar {
+  background-color: #27ae60;
+  color: white;
+}
+
+.btn-entrar:hover {
+  background-color: #219150;
+}
+
+.btn-criar {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-criar:hover {
+  background-color: #2980b9;
 }
 
 @media (max-width: 600px) {
-  .app-container {
-    padding: 20px;
+  h1 {
+    font-size: 1.6rem;
   }
 
-  h1 {
-    font-size: 1.5rem;
+  input, button {
+    font-size: 1rem;
+    height: 52px;
+  }
+
+  .app-container {
+    padding: 30px 20px;
   }
 }
