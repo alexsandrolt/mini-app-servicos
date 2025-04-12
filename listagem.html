@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Listagem</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="main.js" defer></script>
+  <link rel="stylesheet" href="listagem.css">
+</head>
+
+<body>
+  <h1>Listagem</h1>
+  <div id="prestadores" class="lista"></div>
+
+
+  <div class="avaliacoes">
+    <div class="perfil">
+      <img src="./img/Jacob Jones.webp" alt="Foto do prestador">
+      <div class="info">
+        <h3>João Silva</h3>
+        <p>Eletricista</p>
+        <div class="estrelas">⭐⭐⭐⭐☆</div>
+        <p class="comentario">Ótimo serviço, atencioso e rápido!</p>
+      </div>
+    </div>
+
+    <div class="perfil">
+      <img src="./img/Darlene Robert....jpg" alt="Foto do prestador">
+      <div class="info">
+        <h3>Maria Santos</h3>
+        <p>Diarista</p>
+        <div class="estrelas">⭐⭐⭐⭐⭐</div>
+        <p class="comentario">Caprichosa e muito simpática!</p>
+      </div>
+    </div>
+
+    <div class="perfil">
+      <img src="./img/Ramon Santos.avif" alt="Foto do prestador">
+      <div class="info">
+        <h3>Carlos Mendes</h3>
+        <p>Encanador</p>
+        <div class="estrelas">⭐⭐⭐⭐☆</div>
+        <p class="comentario">Resolveu tudo no mesmo dia!</p>
+      </div>
+
+    </div>
+  </div>
+
+  <button class="btn-proximo" onclick="window.location.href='avaliar.html'">
+    Próximo →
+  </button>
+  <button class="btn-voltar" onclick="window.location.href='index.html'">← Sair</button>
+
+
+
+
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      const { data: userData, error: userError } = await supabase.auth.getUser();
+      if (userError || !userData.user) {
+        alert("Você precisa estar logado.");
+        window.location.href = "index.html";
+        return;
+      }
+
+      const { data, error } = await supabase
+        .from('users')
+        .select('*')
+        .eq('tipo', 'prestador');
+
+      if (error) {
+        alert("Erro ao buscar prestadores.");
+        return;
+      }
+
+      const container = document.getElementById("prestadores");
+      data.forEach(p => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <h3>${p.nome}</h3>
+          <p><strong>Categoria:</strong> ${p.categoria || 'Não informado'}</p>
+          <p><strong>Nota:</strong> ${p.nota ?? 'Sem avaliação'}</p>
+          <p><strong>Status:</strong> ${p.status || 'Indisponível'}</p>
+          <button onclick="agendar('${p.id}')">Agendar</button>
+        `;
+        container.appendChild(card);
+      });
+    });
+
+    function agendar(prestadorId) {
+      localStorage.setItem('prestador_id', prestadorId);
+      window.location.href = "agendar.html";
+    }
+  </script>
+</body>
+
+</html>

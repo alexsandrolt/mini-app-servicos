@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Avaliar Prestador</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="main.js" defer></script>
+  <link rel="stylesheet" href="avaliar.css">
+
+
+</head>
+
+<body>
+  <h1>Avaliar Prestador</h1>
+
+  <input type="text" id="prestadorId" placeholder="ID do prestador"><br>
+  <input type="number" id="nota" placeholder="Nota (0 a 5)" min="0" max="5"><br>
+  <button class="btn-avaliar" onclick="avaliar()">Enviar Avaliação</button>
+
+
+  <button class="btn-proximo" onclick="window.location.href='agendar.html'">
+    Próximo →
+  </button>
+
+
+  <script>
+    async function logout() {
+      await supabase.auth.signOut();
+      window.location.href = "index.html";
+    }
+
+
+    async function avaliar() {
+      const id = document.getElementById("prestadorId").value;
+      const nota = parseFloat(document.getElementById("nota").value);
+
+      const { data, error } = await supabase
+        .from("users")
+        .update({ nota })
+        .eq("id", id);
+
+      if (error) alert("Erro ao avaliar");
+      else alert("Avaliação enviada!");
+    }
+
+
+  </script>
+</body>
+
+</html>

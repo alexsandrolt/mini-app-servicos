@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Agendar Serviço</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="main.js" defer></script>
+  <link rel="stylesheet" href="./agendar.css">
+</head>
+
+<body>
+  <h1>Agendar Serviço</h1>
+
+  <form id="formAgendamento">
+    <label>Data:</label><br>
+    <input type="date" id="data" required><br><br>
+
+    <label>Hora:</label><br>
+    <input type="time" id="hora" required><br><br>
+
+    <label>Descrição:</label><br>
+    <textarea id="descricao" rows="4" required></textarea><br><br>
+
+    <button class="btn-confirmar" type="submit">Confirmar Agendamento</button>
+  </form>
+
+  <a href="listagem.html"><button class="btn-voltar">Voltar</button></a>
+
+  <script>
+    document.getElementById("formAgendamento").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const data = document.getElementById("data").value;
+      const hora = document.getElementById("hora").value;
+      const descricao = document.getElementById("descricao").value;
+      const prestador_id = localStorage.getItem('prestador_id');
+
+      if (!prestador_id) {
+        alert("Prestador não selecionado.");
+        return;
+      }
+
+      const { data: userData, error: userError } = await supabase.auth.getUser();
+      if (userError || !userData.user) {
+        alert("Usuário não logado.");
+        window.location.href = "index.html";
+        return;
+      }
+
+      const cliente_id = userData.user.id;
+
+      const { error } = await supabase.from("bookings").insert({
+        cliente_id,
+        prestador_id,
+        data,
+        hora,
+        descricao,
+        status: "pendente"
+      });
+
+      if (error) {
+        alert("Erro ao agendar: " + error.message);
+      } else {
+        alert("Agendamento feito com sucesso!");
+        window.location.href = "listagem.html";
+      }
+    });
+  </script>
+</body>
+
+</html>
