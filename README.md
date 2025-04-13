@@ -26,7 +26,7 @@ GitHub: Versionamento de código
 
 
 
-![Cadastro](https://github.com/user-attachments/assets/ced3a87b-1644-443c-87f1-50719f2b18c7)
+
 
 
 ![login](https://github.com/user-attachments/assets/4522a43b-4131-475d-a48f-42422d44adc1)
