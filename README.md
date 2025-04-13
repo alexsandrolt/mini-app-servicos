@@ -42,7 +42,7 @@ GitHub: Versionamento de código
 
 ![backend-supabase](https://github.com/user-attachments/assets/4563beba-ae3f-4b6c-895a-0d8ed2216904)
 
- 🌍  Visualize Aqui xD :  https://alexsandrolt.github.io/mini-app-servicos/
+ 🌍  Visualizar:  https://alexsandrolt.github.io/mini-app-servicos/
 
 LinkedIn https://www.linkedin.com/in/alexsandro-aparecido-de-oliveira/
 Github https://github.com/alexsandrolt
