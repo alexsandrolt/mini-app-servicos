@@ -1,7 +1,7 @@
-🚀 Mini App de Agendamento de Serviços - app mobile responsivo
+🚀 Mini App de Agendamento de Serviços - app mobile responsivo.
 
-🔥  Descrição:
-Este é um mini app de agendamento de serviços desenvolvido com o objetivo de facilitar a interação entre clientes e prestadores de serviços. A plataforma permite que os usuários agendem serviços de forma prática, visualizem prestadores disponíveis, e realizem agendamentos diretamente pelo app.
+  Descrição:
+Este é um mini app de agendamento de serviços desenvolvido com o objetivo de facilitar a interação entre a plataforma permite que os usuários agendem serviços de forma prática e realizem agendamentos diretamente pelo app.
 
   Funcionalidades
 🔧 Autenticação de Usuários: Usuários podem se cadastrar, fazer login e acessar a plataforma de forma segura.
@@ -9,7 +9,7 @@ Este é um mini app de agendamento de serviços desenvolvido com o objetivo de f
 💻  Tecnologias Usadas
 Frontend: HTML, CSS, JavaScript
 
-Backend: Supabase (para autenticação, API teste/desenvolvimento pública sem fins administrativo)
+Backend: Supabase (para autenticação, API pública sem fins administrativo)
 
 GitHub: Versionamento de código
 
