@@ -1,5 +1,5 @@
 Aplicativo de serviços, desenvolvido com o objetivo de facilitar interação entre a plataforma para permitir que os usuários agendem serviços de forma prática e realizem agendamentos diretamente pelo app.
-Funcionalidades: Autenticação de Usuários podem se cadastrar, fazer login e acessar a plataforma de forma segura.
+Funcionalidades: Cadastro, fazer login e acessar a plataforma de forma segura.
 Tecnologias Usadas |
 Frontend: HTML, CSS, JavaScript.
 Responsivo.
