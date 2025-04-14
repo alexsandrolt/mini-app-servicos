@@ -6,20 +6,10 @@ Este é um mini app de agendamento de serviços desenvolvido com o objetivo de f
   Funcionalidades
 🔧 Autenticação de Usuários: Usuários podem se cadastrar, fazer login e acessar a plataforma de forma segura.
 
-  🛠️ Cadastro de Prestadores de Serviços: Prestadores de serviços podem criar e atualizar seus perfis.
-
- 🔍  Agendamento de Serviços: Clientes podem visualizar prestadores disponíveis e agendar serviços diretamente.
-
- 📦  ⚙️ Confirmação e Recusa de Agendamentos: Prestadores podem confirmar ou recusar os agendamentos realizados pelos clientes.
-
- 📈  Avaliações e Feedback: Após a realização do serviço, clientes podem deixar avaliações para os prestadores.
-
 💻  Tecnologias Usadas
 Frontend: HTML, CSS, JavaScript
 
-Backend: Supabase (para autenticação, banco de dados e funcionalidades de backend)
-
-FlutterFlow: Ferramenta para a criação da interface do app
+Backend: Supabase (para autenticação, API teste/desenvolvimento pública sem fins administrativo)
 
 GitHub: Versionamento de código
 
