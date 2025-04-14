@@ -37,3 +37,8 @@ GitHub: Versionamento de código
 LinkedIn https://www.linkedin.com/in/alexsandro-aparecido-de-oliveira/
 Github https://github.com/alexsandrolt
 
+
+
+![banco de dados](https://github.com/user-attachments/assets/fe62cdc4-7e0c-4985-b7c1-95b4d4651a93)
+
+
