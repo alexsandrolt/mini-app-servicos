@@ -29,5 +29,9 @@ GitHub: Versionamento de código.
 
 
 Visualizar:  https://alexsandrolt.github.io/mini-app-servicos/
+
+
 LinkedIn https://www.linkedin.com/in/alexsandro-aparecido-de-oliveira/
+
+
 Github https://github.com/alexsandrolt
