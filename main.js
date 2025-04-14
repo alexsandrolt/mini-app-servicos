@@ -3,6 +3,8 @@ const supabaseUrl = 'https://zggspgyosbscnuroursp.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpnZ3NwZ3lvc2JzY251cm91cnNwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ0Mjk3NTAsImV4cCI6MjA2MDAwNTc1MH0.ZpRtHZRv3Ds4OyXhibW2N034l2S7IhdgFz0nFyelvrA';
 const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
+// (OBS: Esta URL e a chave de API é pública e não privada, estão sendo usadas diretamente no front-end) APENAS para fins de teste e não ADMINISTRATIVA.
+
 async function executarLogin() {
   const email = document.getElementById('loginEmail').value;
   const password = document.getElementById('loginSenha').value;
