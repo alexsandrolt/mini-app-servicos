@@ -6,9 +6,7 @@ Funcionalidades: Autenticação de Usuários podem se cadastrar, fazer login e a
 Frontend: HTML, CSS, JavaScript.
 Backend: Supabase (para autenticação, API pública sem fins administrativo).
 GitHub: Versionamento de código.
-Visualizar:  https://alexsandrolt.github.io/mini-app-servicos/
-LinkedIn https://www.linkedin.com/in/alexsandro-aparecido-de-oliveira/
-Github https://github.com/alexsandrolt
+
 
 
 
@@ -29,3 +27,8 @@ Github https://github.com/alexsandrolt
 ![banco de dados](https://github.com/user-attachments/assets/fe62cdc4-7e0c-4985-b7c1-95b4d4651a93)
 
 
+
+
+Visualizar:  https://alexsandrolt.github.io/mini-app-servicos/
+LinkedIn https://www.linkedin.com/in/alexsandro-aparecido-de-oliveira/
+Github https://github.com/alexsandrolt
