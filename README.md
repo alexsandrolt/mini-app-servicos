@@ -40,7 +40,7 @@ GitHub: Versionamento de código
 ![agendar](https://github.com/user-attachments/assets/c117b7e3-3236-4037-9875-871479f849ff)
 
 
-![backend-supabase](https://github.com/user-attachments/assets/4563beba-ae3f-4b6c-895a-0d8ed2216904)
+
 
  🌍  Visualizar:  https://alexsandrolt.github.io/mini-app-servicos/
 
